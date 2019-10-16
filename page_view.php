@@ -55,31 +55,31 @@ function fetch_page_visit($connect)
 
 	{
 		$output='
-               	<div class="table-responsive">
+               	<div style="background:  lightgrey" class="table-responsive">
 
-		<table width="100%" id="myTable" class="table table-bordered table-hover">
+		<table  id="myTable" class="table table-bordered table-hover ">
 
 		<thead>
 
 			<tr class="info">
 
-				<th width="20%">Url</th>
+				<th >Url</th>
 
-				<th width="10%">Time</th>
+				<th >Time</th>
 
-				<th width="10%">Ip</th>
+				<th >Ip</th>
 
-				<th width="10%">City</th>
+				<th >City</th>
 
-				<th width="10%">Region</th>
+				<th >Region</th>
 
-                <th width="10%">Location</th>
+                <th >Location</th>
 
-				<th width="10%">Country</th>
+				<th >Country</th>
 
-				<th width="10%">Org</th>
+				<th >Org</th>
 
-				<th width="10%">Postal</th>
+				<th >Postal</th>
 
 			</tr>
 
@@ -99,15 +99,15 @@ function fetch_page_visit($connect)
 
 				<tr>
 
-				<td width="20%"><span>'.$row["page_url"].'</span></td>
-				<td width="10%"><span>'.$row["page_open_datetime"].'</span></td>
-				<td width="10%"><span>'.$row["ip"].'</span></td>
-				<td width="10%"><span>'.$row["city"].'</span></td>
-				<td width="10%"><span>'.$row["region"].'</span></td>
-				<td width="10%"><span>'.$row["loc"].'</span></td>
-				<td width="10%"><span>'.$row["country"].'</span></td>
-				<td width="10%"><span>'.$row["org"].'</span></td>
-				<td width="10%"><span>'.$row["postal"].'</span></td>
+				<td ><span>'.$row["page_url"].'</span></td>
+				<td ><span>'.$row["page_open_datetime"].'</span></td>
+				<td ><span>'.$row["ip"].'</span></td>
+				<td ><span>'.$row["city"].'</span></td>
+				<td ><span>'.$row["region"].'</span></td>
+				<td ><span>'.$row["loc"].'</span></td>
+				<td ><span>'.$row["country"].'</span></td>
+				<td ><span>'.$row["org"].'</span></td>
+				<td ><span>'.$row["postal"].'</span></td>
 
 				
 
@@ -123,23 +123,24 @@ function fetch_page_visit($connect)
 
 			<tr class="info">
 
-				<th width="20%">Url</th>
 
-				<th width="10%">Time</th>
+				<th >Url</th>
 
-				<th width="10%">Ip</th>
+				<th >Time</th>
 
-				<th width="10%">City</th>
+				<th >Ip</th>
 
-				<th width="10%">Region</th>
+				<th >City</th>
 
-                <th width="10%">Location</th>
+				<th >Region</th>
 
-				<th width="10%">Country</th>
+                <th >Location</th>
 
-				<th width="10%">Org</th>
+				<th >Country</th>
 
-				<th width="10%">Postal</th>
+				<th >Org</th>
+
+				<th >Postal</th>
 
 			</tr>
 
@@ -172,8 +173,6 @@ function fetch_page_visit($connect)
 
 }
 
-
-
 ?>
 
 
@@ -184,16 +183,10 @@ function fetch_page_visit($connect)
 
                <div class=" text-center">
               	<span class="btn" style="color:white;background-color: black" id="tar"></span>
-              </div>
-
-	<?php   echo fetch_page_visit($connect);    ?>
-
-
-
-
+              </div><?php   echo fetch_page_visit($connect);    ?>
 <style type="text/css">
 
- table { table-layout: fixed; }
+
 
  body {
 
@@ -214,7 +207,12 @@ function fetch_page_visit($connect)
     }
 
   }
-
+  /*
+table {
+  table-layout: auto;
+  width: 100%;  
+}
+*/
 </style>
 
 <script type="text/javascript">
